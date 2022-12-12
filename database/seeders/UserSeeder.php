@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         //
-        for($i=1; $i<=5 ;$i++){
+        for($i=1; $i<=10 ;$i++){
             $user=User::factory()->create();
             $profile = Profile::factory()->for($user)->has(Group::factory())->create();
             Post::factory()->for($profile)->create();
